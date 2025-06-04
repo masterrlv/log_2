@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    image: log_frontend:v3
+    ports:
+      - "8000:8000"
+    environment:
+      - API_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
