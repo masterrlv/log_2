@@ -31,11 +31,11 @@ export const uploads = {
   uploadLog: (file: File) => {
     const formData = new FormData();
     formData.append('file', file);
-    return api.post('/uploads/', formData, {
+    return api.post('/logs/upload/', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     });
   },
-  getUploadStatus: (uploadId: number) => api.get(`/uploads/${uploadId}/status`),
+  getUploadStatus: (uploadId: number) => api.get(`/logs/upload/${uploadId}/status`),
 };
 
 export const logs = {
@@ -47,7 +47,7 @@ export const logs = {
     source?: string;
     page?: number;
     per_page?: number;
-  }) => api.get('/search/', { params }),
+  }) => api.get('/logs/search/', { params }),
   getTimeSeries: (startTime: string, endTime: string, interval = 'hour') =>
     api.get('/analytics/time-series', { 
       params: { 

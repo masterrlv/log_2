@@ -1,0 +1,8 @@
+2025-06-05 12:24:15,123 - INFO - Application started
+2025-06-05 12:24:15,125 - DEBUG - Initializing database connection
+2025-06-05 12:24:15,130 - INFO - Database connection established
+2025-06-05 12:24:15,132 - WARNING - Configuration file not found, using defaults
+2025-06-05 12:24:15,135 - DEBUG - Processing user request
+2025-06-05 12:24:15,140 - ERROR - Failed to process request: Invalid input
+2025-06-05 12:24:15,142 - CRITICAL - System overload detected
+2025-06-05 12:24:15,145 - INFO - Application shutdown

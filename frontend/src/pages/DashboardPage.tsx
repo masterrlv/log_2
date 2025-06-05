@@ -120,9 +120,9 @@ export function DashboardPage() {
 
   // Redirect to login if not authenticated
   useEffect(() => {
-    if (!user) {
-      navigate('/login');
-    }
+    // if (!user) {
+    //   navigate('/login');
+    // }
   }, [user, navigate]);
 
   return (
